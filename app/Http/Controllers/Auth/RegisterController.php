@@ -90,11 +90,6 @@ class RegisterController extends Controller
             $file->storeAs('public/avatar/' . $avatar->id, $filename);
         }
 
-        if (is_a($user, User::class)) {
-            Mail::to($user)
-                ->queue(new WelcomeNewUser($user));
-        }
-
         return $user;
     }
 }

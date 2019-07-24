@@ -15,37 +15,20 @@ class UsersTableSeeder extends Seeder
     {
         User::truncate(); //清空資料庫
         User::create([
-            'name' => 'Ken',
-            'password' => bcrypt('hkshks'),
-            'email' => 'GoalCareHKS@gmail.com',
-            'position' => '老闆',
+            'name' => 'tudou',
+            'password' => bcrypt('123456'),
+            'email' => '18511099264@163.com',
+            'position' => 'admin',
             'company_id' => 1,
             'email_verified_at' => now(),
         ]);
         User::create([
-            'name' => 'Tiffany',
-            'password' => bcrypt('hkshks'),
-            'email' => 'ggg44473@gmail.com',
-            'position' => '專案經理',
+            'name' => 'warren',
+            'password' => bcrypt('123456'),
+            'email' => 'warren@holla.world',
+            'position' => 'admin',
+            'company_id' => 1,
             'email_verified_at' => now(),
         ]);
-        User::create([
-            'name' => 'Stan',
-            'password' => bcrypt('hkshks'),
-            'email' => 'huangkaiyun1@gmail.com',
-            'position' => '工程師',
-            'email_verified_at' => now(),
-        ]);
-        User::create([
-            'name' => 'Hilton',
-            'password' => bcrypt('hkshks'),
-            'email' => 'h20110213@gmail.com',
-            'position' => '總經理特助',
-            'email_verified_at' => now(),
-        ]);
-        User::unguard();
-        // factory(User::class, 120)->create();
-        User::reguard();
-
     }
 }
